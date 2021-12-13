@@ -1,0 +1,11 @@
+extends base
+include mixins/video
+
+block homeNav
+    a(href="/videos/upload") Upload Video
+
+block content
+    each video in videos
+        +video(video)
+    else
+        span Sorry but nothing found.
